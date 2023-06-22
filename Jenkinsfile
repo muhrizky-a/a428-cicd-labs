@@ -9,7 +9,7 @@ pipeline {
         stage('Reset project settings') { 
             steps {
 		sh 'rm -rf node_modules'
-                sh 'rm package-lock.json'
+                sh 'rm -rf package-lock.json'
                 sh 'npm cache clean --force'
             }
         }
