@@ -10,7 +10,6 @@ pipeline {
             steps {
 		sh 'rm -rf node_modules'
                 sh 'rm package-lock.json'
-                sh 'npm cache clean'
                 sh 'npm cache clean --force'
             }
         }
