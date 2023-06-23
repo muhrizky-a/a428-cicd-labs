@@ -1,6 +1,6 @@
 node {
     docker.image('node:16-buster-slim').inside('-p 3000:3000') {
-	triggers {
+	pipelineTriggers {
 	    pollSCM('H/2 * * * *')
 	}
 	stage('Reset project settings') { 
