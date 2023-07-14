@@ -5,6 +5,9 @@ node {
 	    sh 'rm -rf package-lock.json'
 	    sh 'npm cache clean --force'
         }
+        stage('Build') { 
+	    sh 'npm install' 
+        }
         stage('Test') { 
 	    sh './jenkins/scripts/test.sh'
         }
