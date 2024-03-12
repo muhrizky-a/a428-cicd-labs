@@ -17,6 +17,7 @@ node {
 	    sh './jenkins/scripts/kill.sh' 
         }
         stage('Cleanup') {
+            deleteDir()
             cleanWs()
         }
     }
