@@ -7,6 +7,7 @@ node {
 	    sh 'npm cache clean --force'
         } */
         stage('Build') { 
+            checkout scm
 	    sh 'npm install' 
         }
         stage('Test') { 
